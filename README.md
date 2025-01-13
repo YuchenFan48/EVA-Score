@@ -32,13 +32,14 @@ chmod +x run.sh
 ## Citation
 If you find our work useful, please consider citing SQC-Score:
 ```
-@article{fan2024sqc,
-      title={Evaluating Generative Language Models in Information Extraction as Subjective Question Correction}, 
-      author={Yuchen Fan, Yantao Liu, Zijun Yao, Jifan Yu, Lei Hou, Juanzi Li},
+@misc{fan2024evascoreevaluatingabstractivelongform,
+      title={EVA-Score: Evaluating Abstractive Long-form Summarization on Informativeness through Extraction and Validation}, 
+      author={Yuchen Fan and Xin Zhong and Yazhe Wan and Chengsi Wang and Haonan Cheng and Gaoche Wu and Ning Ding and Bowen Zhou},
       year={2024},
-      eprint={2404.03532},
+      eprint={2407.04969},
       archivePrefix={arXiv},
-      primaryClass={cs.CL}
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2407.04969}, 
 }
 ```
 
