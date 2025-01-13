@@ -1,0 +1,69 @@
+Given a text, your task is to extract all the entities as comprehensive as possible from the text. 
+
+Below is the list of entities that you need to extract from the text.
+
+| Types | Content |
+|-------|---------|
+| PER   | People, including fictional |
+| ORG   | Companies, universities, institutions, political or religious groups, etc. |
+| LOC   | Geographically defined locations, including mountains, waters, etc. Politically defined locations, including countries, cities, states, streets, etc. Facilities, including buildings, museums, stadiums, hospitals, factories, airports, etc. |
+| TIME  | Absolute or relative dates or periods. |
+| NUM   | Percents, money, quantities Products, including vehicles, weapons, etc. |
+| MISC  | Events, including elections, battles, sporting events, etc. Laws, cases, languages, etc |
+
+Respond with a list of dictionaries, where each dictionary contains the entity type and the entity text. The list should be sorted by the entity type, and the entities should be sorted by their start position.
+
+Note: You should respond in a list of dictionaries, where each dictionary contains the entity type and the entity text.
+
+To make it specific, the format is like:
+
+[
+    {"type": "", "text": ""},
+    {"type": "", "text": ""},
+    {"type": "", "text": ""}
+]
+
+I will provide you with some examples to help you understand the task.
+
+Example 1
+
+"Apple is looking at buying U.K. startup, U.S. company and China startup for $1 billion. Mr. John Doe is the CEO of the company."
+
+[
+    {"type": "ORG", "text": "U.K. startup"},
+    {"type": "ORG", "text": "U.S. company"},
+    {"type": "ORG", "text": "China startup"},
+    {"type": "ORG", "text": "Apple"},
+    {"type": "PER", "text": "John Doe"},
+    {"type": "MISC", "text": "CEO"},
+    {"type": "NUM", "text": "$1 billion"}
+]
+
+Example 2
+
+"Skai TV is a Greek free-to-air television network based in Piraeus. It is part of the Skai Group, one of the largest media groups in the country. It was relaunched in its present form on 1st of April 2006 in the Athens metropolitan area, and gradually spread its coverage nationwide. Besides digital terrestrial transmission, it is available on the subscription-based encrypted services of Nova and Cosmote TV. Skai TV is also a member of Digea, a consortium of private television networks introducing digital terrestrial transmission in Greece. At launch, Skai TV opted for dubbing all foreign language content into Greek, instead of using subtitles. This is very uncommon in Greece for anything except documentaries (using voiceover dubbing) and children's programmes (using lip-synced dubbing), so after intense criticism the station switched to using subtitles for almost all foreign shows."
+
+[
+    {"type": "ORG", "text": "Skai TV"},
+    {"type": "LOC", "text": "Greek"},
+    {"type": "MISC", "text": "television network"},
+    {"type": "LOC", "text": "Piraeus"},
+    {"type": "ORG", "text": "Skai Group"},
+    {"type": "TIME", "text": "1st of April 2006"},
+    {"type": "LOC", "text": "Athens metropolitan aread"},
+    {"type": "MISC", "text": "Digital terrestrial transmission"},
+    {"type": "MISC", "text": "Subscription-based encrypted services"}
+    {"type": "ORG", "text": "Nova"},
+    {"type": "ORG", "text": "Cosmote TV"},
+    {"type": "ORG", "text": "Digea"},
+    {"type": "LOC", "text": "Greece"},
+    {"type": "MISC", "text": "Foreign language content"},
+    {"type": "MISC", "text": "Documentaries"}, 
+    {"type": "MISC", "text": "Voiceover dubbing"},
+    {"type": "MISC", "text": "Lip-synced dubbing"},
+    {"type": "MISC", "text": "Subtitles"},
+    {"type": "MISC", "text": "Foreign shows"},
+    {"type": "MISC, "text": "Children's programmes"}
+]
+
+Respond in a JSON Format.

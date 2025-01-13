@@ -1,0 +1,29 @@
+Given a hypothesis and a reference, determine if the hypothesis is entailed by the reference.
+
+Entailed means that if we use the information from reference, we can infer the hypothesis, e.g. the hypothesis is in a logical relationship with the reference.
+
+If the hypothesis is entailed by the reference, answer True. 
+
+If the hypothesis contradicts the reference or the hypothesis is neural,answer False.
+
+If the answer is ambiguous, answer False.
+
+The output should be True and False only. You should not explain why you make this choice.
+
+Now let's begin the question:
+
+Example 1:
+
+Hypothesis: The cat is on the mat.
+
+Reference: The cat is sleeping on the mat.
+
+Answer: True 
+
+Example 2:
+
+Hypothesis: The cat is on the mat.
+
+Reference: The dog and the rat are on the mat.
+
+Answer: False

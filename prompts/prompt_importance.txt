@@ -1,0 +1,24 @@
+Given a topic, a context and a sentence, your task is to identify whether the importance of the given sentence to the context.
+
+Assign a score from 0 to 5 based on the following criteria: 
+
+- Score 5 (Excellent): The sentence is crucial to the context, providing essential insights or information directly related to the topic.
+- Score 4 (Good): The sentence significantly contributes to the context, adding valuable information or perspective relevant to the topic.
+- Score 3 (Moderate): The sentence adds some relevant information to the context but is not critical to understanding the topic.
+- Score 2 (Fair): The sentence is somewhat related to the context but does not add substantial value or insight to the topic.
+- Score 1 (Poor): The sentence has minimal relevance to the context and does not contribute meaningfully to the topic.
+- Score 0 (Unacceptable): The sentence is irrelevant or detracts from the context, offering no value or insight related to the topic.
+
+You should consider the context provided and evaluate the sentence based on its relevance, informativeness, and significance to the topic. Your score should reflect the importance of the sentence in enhancing the understanding or discussion of the topic within the given context. You should also give the rationale for your score, explaining why you believe the sentence deserves the assigned rating.
+
+Example:
+
+Topic: Climate Change
+Context: "Climate change is a pressing issue that affects global temperatures and weather patterns. It is caused by human activities such as burning fossil fuels and deforestation."
+Sentence: "Reducing carbon emissions is essential for mitigating the effects of climate change."
+Score: 5 (The sentence is crucial to the context as it provides a direct solution to the issue described.) because the sentence describes a key action that can help address the problem of climate change by reducing carbon emissions which are a major contributor to the issue.
+
+Topic: Kobe Bryant
+Context: "Kobe Bryant was a legendary basketball player who played for the Los Angeles Lakers. He won multiple NBA championships and was known for his scoring ability."
+Sentence: "Kobe Bryant was successful."
+Score: 1 (The sentence is somewhat related to the context but does not add substantial value or insight to the topic.) because the sentence is a general statement that does not provide specific information or context about Kobe Bryant's success in basketball.

@@ -1,0 +1,37 @@
+Given a text and entities in the given text, your task is to extract document-level relation triples from the text. 
+
+A relation triple is a 3-tuple (subject, relation, object) where subject and object are named entities and relation is the relation between them. For example, given the text "Bill Gates is the founder of Microsoft", the extracted relation triple would be (Bill Gates, founder, Microsoft).
+
+In document-level RE, subject and object entities in a given triple might be dispersed across distinct sentences, and certain entities may have aliases in the form of distinct entity mentions. Therefore, you should pay attention to relations across sentences and entity aliases rather than sentence-level relations. i.e. You should not respond with sentence-level relations, but document-level relations.
+
+The answer format is listed below, you should obey it for any situation. Any additional information should not be added. Neither head entity nor tail entity should be empty strings.
+
+The relation triples should be in the following format:
+('head entity', 'relation', 'tail entity')
+('head entity', 'relation', 'tail entity')
+('head entity', 'relation', 'tail entity')
+
+I will provide you with examples:
+
+Text:
+Alexeni is a commune in Ialomița County , Romania , some 65   km north - east of Bucharest , near the town of Urziceni . It is composed of a single village , Alexeni . Until 2001 a Romanian Air Force military helicopters unit was located at the nearby airfield . In 2007 , as the airfield was not used by the Romanian Air Force anylonger , the former Minister of Transport Radu Berceanu suggested to use the location for Bucharest 's new low - cost flights airport(as the operational tariffs for Bucharest 's previous low - cost hub , Aurel Vlaicu Airport , were set to grow ) . However , some analysts considered the project unrealistic and doomed to fail due to the poor conditions of the infrastructure in the area . Eventually those plans were abandoned and all low - cost flights were moved in March 2012 at Bucharest main airport Henri Coandă International Airport .
+
+Entities:
+['Urziceni', 'Aurel Vlaicu Airport', '2001', '2007', 'Radu Berceanu', 'Romania', 'Romanian Air Force', 'Alexeni', 'Ialomița County', 'March 2012', 'Henri Coandă International Airport', '65 km', 'Bucharest']
+
+('Ialomița County', 'located in the administrative territorial entity', 'Romania')
+('Ialomița County', 'country', 'Romania')
+('Ialomița County', 'contains administrative territorial entity', 'Alexeni')
+('Romania', 'contains administrative territorial entity', 'Ialomița County')
+('Bucharest', 'country', 'Romania')
+('Bucharest', 'located in the administrative territorial entity', 'Romania')
+('Romanian Air Force', 'country', 'Romania')
+('Aurel Vlaicu Airport', 'country', 'Romania')
+('Aurel Vlaicu Airport', 'located in the administrative territorial entity', 'Bucharest')
+('Henri Coandă International Airport', 'country', 'Romania')
+('Urziceni', 'country', 'Romania')
+('Radu Berceanu', 'country of citizenship', 'Romania')
+('Alexeni', 'located in the administrative territorial entity', 'Ialomița County')
+('Alexeni', 'country', 'Romania')
+
+You should extract as many relation triples as possible.

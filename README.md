@@ -13,6 +13,8 @@ conda create -n <your-env-name> python=3.10
 pip install -r requirements.txt
 ```
 
+Put your OpenAI API key in the `codes/api.key` file for the usage of [FActScore](https://github.com/shmsw25/FActScore).
+
 ## Run EVA-Score
 To run EVA-Score, you need to prepare the data in the following format:
 - `text`: the original text
