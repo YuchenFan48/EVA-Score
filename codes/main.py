@@ -232,8 +232,6 @@ def main():
     logging.info("Preprocess for candidate generation")
     atomic_facts, total_entities = get_atomic_facts(args, docred_path, topics, generations)
     info = []
-    pre_process_time = time.time()
-    print("Pre-process Time: ", pre_process_time)
 
     for atomic_fact, total_entity, context, topic, generation in zip(
             atomic_facts, total_entities, contexts, topics, generations):
