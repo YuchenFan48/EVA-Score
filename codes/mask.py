@@ -4,7 +4,7 @@ def combine_cascade(dataset, threshold):
     """
     Combine the annotations into a cascade of implications.
     """
-    implications = find_logical_implications(dataset, threshold=threshold)
+    implications = find_logical_implications(dataset)
     for i, data in enumerate(dataset):
         data['implications'] = implications[i]
     return implications
