@@ -32,7 +32,7 @@ chmod +x run.sh
 
 ![result](./figs/results.png)
 ## Citation
-If you find our work useful, please consider citing SQC-Score:
+If you find our work useful, please consider citing EVA-Score:
 ```
 @misc{fan2024evascoreevaluatingabstractivelongform,
       title={EVA-Score: Evaluating Abstractive Long-form Summarization on Informativeness through Extraction and Validation}, 
