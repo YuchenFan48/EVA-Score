@@ -226,9 +226,9 @@ def main():
             generations.append(item["model_pred"])
             contexts.append(item["gold_answer"])
 
-    topics = topics[:2]
-    generations = generations[:2]
-    contexts = contexts[:2]
+    topics = topics
+    generations = generations
+    contexts = contexts
     logging.info("Preprocess for candidate generation")
     atomic_facts, total_entities = get_atomic_facts(args, docred_path, topics, generations)
     info = []
@@ -263,8 +263,8 @@ def main():
     assert len(new_sentence_facts) == len(new_filtered_facts)
 
     sentence_results = calculate_recall(
-        args, docred_path, topics[:2], generations[:2],
-        generations[:2], final_atomic_facts
+        args, docred_path, topics, generations,
+        generations, final_atomic_facts
     )
 
     # Extract metrics from results
